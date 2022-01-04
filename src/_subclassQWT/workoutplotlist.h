@@ -9,6 +9,9 @@
 #include "shapefactory.h"
 #include "qwt_plot_marker.h"
 #include "account.h"
+#include "qwt_text.h"
+#include <QPen>
+
 
 
 

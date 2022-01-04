@@ -9,7 +9,7 @@ All rights reserved.
 #if !defined(DSI_SERIAL_CALLBACK_HPP)
 #define DSI_SERIAL_CALLBACK_HPP
 
-#include "types.h"
+#include "inc/types.h"
 
 
 //////////////////////////////////////////////////////////////////////////////////

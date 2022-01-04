@@ -2,7 +2,8 @@
 #define OXYGEN_CONTROLLER_H
 
 
-#include "types.h"
+
+#include "inc/types.h"
 #include "dsi_framer_ant.hpp"
 #include <stdint.h>
 #include <QObject>

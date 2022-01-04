@@ -10,7 +10,7 @@ All rights reserved.
 #ifndef BPS_PAGES_H
 #define BPS_PAGES_H
 
-#include "types.h"
+#include "inc/types.h"
 
 
 #define BPS_PAGE_RESERVE_BYTE               ((UCHAR) 0xFF)

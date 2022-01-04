@@ -115,6 +115,41 @@ win32-msvc* {
     # we need windows kit 8.2 or higher with MSVC, offer default location
     isEmpty(WINKIT_INSTALL) WINKIT_INSTALL= "C:/Program Files (x86)/Windows Kits/8.1/Lib/winv6.3/um/x64"
     LIBS += -L$${WINKIT_INSTALL} -lGdi32 -lUser32
+
+    ANTsrcPATH = F:/Github/ANT-SDK_PC.3.5/ANT_LIB
+    ANTbuildPATH = F:\Github\ANT-SDK_PC.3.5\x64\Release\
+
+    QWTsrcPATH = F:\qwt\qwt-6.2.0\src
+    QWTbuildPath = F:/qwt/build-qwt-Desktop_Qt_5_15_2_MSVC2019_64bit-Release
+    VLCQTsrcPath=F:/Github/vlc-qt/src
+    VLCQTbuildPath=F:/Github/vlc-qt/build
+    SMFLpath=F:/Github/SMFL/
+
+        INCLUDEPATH += $$QWTsrcPATH
+        INCLUDEPATH += $$VLCQTsrcPath
+        INCLUDEPATH += $$SMFLpath/include
+        INCLUDEPATH += $$ANTsrcPATH
+        INCLUDEPATH += $$ANTsrcPATH/inc \
+        INCLUDEPATH += $$ANTsrcPATH/common \
+        INCLUDEPATH += $$ANTsrcPATH/libraries \
+        INCLUDEPATH += $$ANTsrcPATH/software/ANTFS \
+        INCLUDEPATH += $$ANTsrcPATH/software/serial \
+        INCLUDEPATH += $$ANTsrcPATH/software/serial/device_management \
+        INCLUDEPATH += $$ANTsrcPATH/software/system \
+        INCLUDEPATH += $$ANTsrcPATH/software/USB \
+        INCLUDEPATH += $$ANTsrcPATH/software/USB/device_handles \
+        INCLUDEPATH += $$ANTsrcPATH/software/USB/devices
+
+        LIBS +=  -L$$QWTbuildPath/lib/ -lqwt
+        LIBS +=  $$VLCQTbuildPath\src\plugins\VLCQt\VLCQt.lib
+        LIBS +=  $$VLCQTbuildPath\src\core\VLCQtCore.lib
+        LIBS +=  $$VLCQTbuildPath\src\qml\VLCQtQml.lib
+        LIBS +=  $$VLCQTbuildPath\src\widgets\VLCQtWidgets.lib
+        LIBS +=  $$SMFLpath\lib\sfml-audio.lib
+
+        LIBS +=  $$ANTbuildPATH/ANT_Lib.lib
+
+        DEFINES += QWT_DLL
     CONFIG += force_debug_info
 
 
@@ -193,3 +228,10 @@ include (src/Fit_20_16/Fit.pri)
 
 
 RESOURCES += MyResources.qrc
+
+win32:CONFIG(release, debug|release): LIBS += -L$$QWTbuildPath/lib/ -lqwt
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$QWTbuildPath/lib/ -lqwtd
+else:unix: LIBS += -L$$QWTbuildPath/lib/ -lqwt
+
+INCLUDEPATH += $$QWTbuildPath
+DEPENDPATH += $$QWTbuildPath

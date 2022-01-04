@@ -11,17 +11,17 @@
 
 
 
-#include <VLCQtCore/Common.h>
-#include <VLCQtCore/Instance.h>
-#include <VLCQtCore/Media.h>
-#include <VLCQtCore/MediaPlayer.h>
-#include <VLCQtCore/MediaListPlayer.h>
-#include <VLCQtCore/Video.h>
-#include <VLCQtCore/Audio.h>
-#include <VLCQtWidgets/ControlVideo.h>
-#include <VLCQtWidgets/ControlAudio.h>
-#include <VLCQtWidgets/WidgetSeek.h>
-#include <VLCQtWidgets/WidgetVideo.h>
+#include "core/Common.h"
+#include "core/Instance.h"
+#include "core/Media.h"
+#include "core/MediaPlayer.h"
+#include "core/MediaListPlayer.h"
+#include "core/Video.h"
+#include "core/Audio.h"
+#include "widgets/ControlVideo.h"
+#include "widgets/ControlAudio.h"
+#include "widgets/WidgetSeek.h"
+#include "widgets/WidgetVideo.h"
 
 
 

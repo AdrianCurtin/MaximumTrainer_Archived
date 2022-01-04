@@ -2,7 +2,8 @@
 #define MYQWTDIAL_H
 
 #include "qwt_dial.h"
-
+#include <QPainter>
+#include <QBrush>
 
 class myQwtDial : public QwtDial
 {

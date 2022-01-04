@@ -1,7 +1,7 @@
 #ifndef CBSC_PAGES_H
 #define CBSC_PAGES_H
 
-#include "types.h"
+#include "inc/types.h"
 
 
 typedef struct

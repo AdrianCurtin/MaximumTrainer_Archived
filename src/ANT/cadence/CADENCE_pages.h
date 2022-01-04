@@ -1,7 +1,7 @@
 #ifndef CADENCE_PAGES_H
 #define CADENCE_PAGES_H
 
-#include "types.h"
+#include "inc/types.h"
 
 
 typedef struct

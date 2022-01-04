@@ -4,7 +4,7 @@
 
 #include "SPEED_pages.h"
 #include "common_pages.h"
-#include "types.h"
+#include "inc/types.h"
 #include "dsi_framer_ant.hpp"
 #include "account.h"
 

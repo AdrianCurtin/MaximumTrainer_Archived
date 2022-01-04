@@ -2,6 +2,8 @@
 #define ZONEITEM_H
 
 #include <qwt_plot_zoneitem.h>
+#include <QColor>
+#include <QBrush>
 
 class ZoneItem : public QwtPlotZoneItem
 {

@@ -9,9 +9,9 @@ All rights reserved.
 #if !defined(DSI_FRAMER_ANT_HPP)
 #define DSI_FRAMER_ANT_HPP
 
-#include "types.h"
-#include "antmessage.h"
-#include "antdefines.h"
+#include "inc/types.h"
+#include "inc/antmessage.h"
+#include "inc/antdefines.h"
 #include "dsi_framer.hpp"
 #include "dsi_thread.h"
 

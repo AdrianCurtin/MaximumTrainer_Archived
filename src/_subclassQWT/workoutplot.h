@@ -8,6 +8,9 @@
 #include "qwt_plot_marker.h"
 #include "qwt_plot_textlabel.h"
 #include "qwt_plot_shapeitem.h"
+#include "qwt_text.h"
+#include <QPainter>
+#include <QColor>
 
 #include "settings.h"
 #include "account.h"

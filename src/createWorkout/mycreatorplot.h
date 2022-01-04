@@ -16,6 +16,8 @@
 #include "shapefactory.h"
 #include "zoneitem.h"
 #include "account.h"
+#include "qwt_text.h"
+#include <QPen>
 
 
 

@@ -1,7 +1,7 @@
 #ifndef HRM_PAGES_H
 #define HRM_PAGES_H
 
-#include "types.h"
+#include "inc/types.h"
 
 
 #define MAX_MSG_REPEAT_HR                    (10)

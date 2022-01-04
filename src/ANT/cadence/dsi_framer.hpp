@@ -9,7 +9,7 @@ All rights reserved.
 #if !defined(DSI_FRAMER_HPP)
 #define DSI_FRAMER_HPP
 
-#include "types.h"
+#include "inc/types.h"
 #include "dsi_serial.hpp"
 
 

@@ -14,7 +14,7 @@
    limitations under the License.
 */
 
-#include "types.h"
+#include "inc/types.h"
 
 #ifndef COMMON_PAGES_H
 #define COMMON_PAGES_H

@@ -2,6 +2,8 @@
 #define MYQWTPLOTPICKER_H
 
 #include "qwt_plot_picker.h"
+#include <QColor>
+#include "qwt_text.h"
 
 
 class MyQwtPlotPicker : public QwtPlotPicker

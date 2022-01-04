@@ -1,7 +1,7 @@
 #ifndef SPEED_PAGES_H
 #define SPEED_PAGES_H
 
-#include "types.h"
+#include "inc/types.h"
 
 
 
