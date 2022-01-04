@@ -140,6 +140,22 @@ void DialogLogin::loginLoaded(bool ok){
         return;
     }
 
+    /// --- Offline Login/Skip
+    if(true)
+    {
+            account->email="123@test.com";
+            account->password="password";
+            XmlUtil::parseLocalSaveFile(account);
+            settings->lstUsername.append(account->email);
+            settings->lastLoggedUsername = account->email;
+            QString encryptedPw=account->password;
+            settings->lastLoggedKey = encryptedPw;
+            settings->saveGeneralSettings();
+            this->accept();
+            return;
+    }
+    ///
+
     /// ------------------------------- Login sucess! ---------------------------------------
     if (ui->webView_login->url().toDisplayString().contains("/account_rest/"))  {
         qDebug() << "Parse Json Object Account";
@@ -189,6 +205,7 @@ void DialogLogin::loginLoaded(bool ok){
             settings->saveGeneralSettings();
 
             this->accept();
+            return;
         });
 
     }
@@ -311,8 +328,13 @@ void DialogLogin::slotFinishedGetVersion() {
     //error
     else {
         qDebug() << "Problem getting version..." << replyVersion->errorString();
-        ui->label_process->setText("Problem retrieving version: " + replyVersion->errorString());
+        ui->label_process->setText("Unable to check version number\n" + replyVersion->errorString()+"\nMaximumTrainer no longer recieves updates\nand is Offline Only for the moment");
+
+        ui->webView_login->setUrl(QUrl(Environnement::getUrlLogin()));
+        connect(ui->webView_login, SIGNAL(loadFinished(bool)), this, SLOT(loginLoaded(bool)));
+
     }
+
     replyVersion->deleteLater();
 
 

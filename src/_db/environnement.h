@@ -13,7 +13,7 @@ const static QString date_released = "16/03/2019";  //(dd/mm/yyyy)
 
 
 const static QString dev = "http://localhost/index.php/";
-const static QString prod = "https://maximumtrainer.com/";
+const static QString prod = "http://adriancurtin.com/";
 const static QString indexPage = "index.php/";
 
 
@@ -154,6 +154,7 @@ public:
     static QString getUrlStudio();
     static QString getUrlAchievement();
     static QString getUrlSettings();
+    static QString getUrlERG();
 
     static QString getUrlWorkout();
     static QString getUrlWorkoutCreator();

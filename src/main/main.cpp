@@ -41,9 +41,9 @@ int main(int argc, char *argv[]) {
     if (login.exec() != QDialog::Accepted) {
         return 0; // Login refused
     }
-    if (login.getGotUpdate()) {
-        return 0; // Executed DialogLogin and redirected to download new version
-    }
+    //if (login.getGotUpdate()) {
+    //    return 0; // Executed DialogLogin and redirected to download new version
+    //}
     MainWindow w;
     w.show();
 

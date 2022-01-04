@@ -82,7 +82,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     ui->webView_settings->setUrl(QUrl(Environnement::getUrlSettings()));
     ui->webView_plan->setUrl(QUrl(Environnement::getUrlPlans()));
     ui->webView_studio->setUrl(QUrl(Environnement::getUrlStudio()));
-    ui->webView_ergDb->setUrl(QUrl("https://www.ergdb.org/maximum-trainer/"));
+    ui->webView_ergDb->setUrl(QUrl(Environnement::getUrlERG()));
 
 
 
@@ -201,11 +201,11 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     connect(planObject, SIGNAL(signal_goToWorkout(QString)), this, SLOT(goToWorkoutPlanFilter(QString)) );
 
 
-    connect(ui->webView_settings, SIGNAL(loadFinished(bool)), this, SLOT(fillSettingPage()));
-    connect(ui->webView_studio, SIGNAL(loadFinished(bool)), this, SLOT(fillStudioPage()));
+    //connect(ui->webView_settings, SIGNAL(loadFinished(bool)), this, SLOT(fillSettingPage()));
+    //connect(ui->webView_studio, SIGNAL(loadFinished(bool)), this, SLOT(fillStudioPage()));
 
-    connect(ui->webView_ergDb->page()->profile(), SIGNAL(downloadRequested(QWebEngineDownloadItem*)),
-                    this, SLOT(downloadRequested(QWebEngineDownloadItem*)));
+//connect(ui->webView_ergDb->page()->profile(), SIGNAL(downloadRequested(QWebEngineDownloadItem*)),
+  //                  this, SLOT(downloadRequested(QWebEngineDownloadItem*)));
 
 }
 

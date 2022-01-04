@@ -153,6 +153,14 @@ QString Environnement::getUrlStudio() {
     }
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+QString Environnement::getUrlERG() {
+
+Settings *settings = qApp->property("User_Settings").value<Settings*>();
+
+    return prod;
+}
+
 
 
 
